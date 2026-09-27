@@ -12,4 +12,5 @@ Fizemos a figura que o professor deu
 
 # Resultados 
 ![alt text](<Captura de ecrã 2026-09-22 152330.png>)
+![alt text](image-1.png)
 

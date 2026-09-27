@@ -2,7 +2,7 @@
 ## Autor
 - Beatriz Meireles Marinho
 - A114028
-- ![alt text](image.png)
+- ![alt text](image-2.png)
 
 
 # Resumo

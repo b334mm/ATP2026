@@ -9,3 +9,4 @@
 Criamos um programa em phyton para jogar o jogo "Adivinha o número".
 
 # Resultados
+[Ver código do jogo](adivinha_numero.py)

@@ -87,7 +87,3 @@ while True:
     else:
         print("Entrada inválida. Digite 's' para sim ou 'n' para não.")
 
-
-
-
-        

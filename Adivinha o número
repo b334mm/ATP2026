@@ -1,0 +1,93 @@
+import random
+
+def utilizador_adivinha():
+    numero = random.randint(0, 100)
+    tentativas = 0
+
+    print("Bem-vindo ao jogo 'Adivinha o número'!")
+    print("Pensei num número entre 0 e 100. Tente adivinhar.")
+
+    while True:
+        try:
+            palpite = int(input("Digite seu palpite: "))
+        except ValueError:
+            print("Entrada inválida. Digite um número inteiro.")
+            continue
+
+        tentativas += 1
+
+        if palpite == numero:
+            print("Acertou.")
+            print(f"Você acertou em {tentativas} tentativa(s).")
+            break
+        elif palpite < numero:
+            print("O número que pensei é maior.")
+        else:
+            print("O número que pensei é menor.")
+
+def computador_adivinha():
+    print("\npense num número entre 0 e 100. Agora o computador tenta adivinhar.")
+    print("À medida que o computador tenta adivinhar, responda com: acertou/ maior/ menor.")
+    input()
+
+    baixo = 0
+    alto = 100
+    tentativas_computador = 0
+
+    while True:
+        tentativas_computador += 1
+        palpite_computador = (baixo + alto) // 2
+        print(f"O computador está tentando: {palpite_computador}")
+        resposta = input("Digite 'maior', 'menor' ou 'acertou': ").strip().lower()
+
+        if resposta == "acertou":
+            print(f"O computador acertou em {tentativas_computador} tentativa(s)!")
+            break
+        elif resposta == "maior":
+            baixo = palpite_computador + 1
+        elif resposta == "menor":
+            alto = palpite_computador - 1
+        else:
+            print("Entrada inválida. Por favor, responda com 'maior', 'menor' ou 'acertou'.")
+
+
+print("1- O computador pensa num número e você adivinha.")
+print("2- Você pensa num número e o computador adivinha.")
+
+while True:
+    opcao = input("Escolha a modalidade (1 ou 2): ").strip()
+    if opcao == "1":
+        utilizador_adivinha()
+        break
+    elif opcao == "2":
+        computador_adivinha()
+        break
+    else:
+        print("Opção inválida.")
+
+print("Jogar novamente? (s/n):")
+while True:
+    jogar_novamente = input().strip().lower()
+    if jogar_novamente == "s":
+        print("Reiniciando o jogo.")
+        while True:
+            opcao = input("Escolha a modalidade (1 ou 2): ").strip()
+            if opcao == "1":
+                utilizador_adivinha()
+                break
+            elif opcao == "2":
+                computador_adivinha()
+                break
+            else:
+                print("Opção inválida.")
+        print("Jogar novamente? (s/n):")
+    elif jogar_novamente == "n":
+        print("Obrigado por jogar.")
+        break
+    else:
+        print("Entrada inválida. Digite 's' para sim ou 'n' para não.")
+
+
+
+
+        

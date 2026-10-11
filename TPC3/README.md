@@ -1,4 +1,4 @@
-# TPC1: Blockly Games
+# TPC3: Corrida para o 100
 ## Autor
 - Beatriz Meireles Marinho
 - A114028

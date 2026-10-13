@@ -9,4 +9,4 @@
 
 
 # Resultados
-[Ver código do jogo]
+[Ver código do jogo](TPC3.py)
